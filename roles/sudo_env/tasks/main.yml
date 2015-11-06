@@ -1,0 +1,11 @@
+- name: add proper settings for wheel group to /etc/sudoers
+  lineinfile: >
+    dest=/etc/sudoers
+    regexp="^%wheel"
+    line="%wheel	ALL=(ALL) NOPASSWD: ALL"
+
+- name: add proper settings for ansible user to /etc/sudoers
+  lineinfile: >
+    dest=/etc/sudoers
+    regexp="^Defaults:ansible	!requiretty"
+    line="Defaults:ansible	!requiretty"

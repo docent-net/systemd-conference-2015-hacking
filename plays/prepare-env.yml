@@ -1,0 +1,8 @@
+---
+
+- hosts: linux-box
+  remote_user: root
+  sudo: no
+  roles:
+  - { role: sudo_env }
+  - { role: ansible_user }

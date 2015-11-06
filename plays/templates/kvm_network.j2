@@ -1,0 +1,11 @@
+[Match]
+Name=ens*
+
+[Network]
+DNS={{ linux_box.dns }}
+
+[Address]
+Address={{ linux_box.addr }}/{{ linux_box.network }}
+
+[Route]
+Gateway={{ linux_box.gateway }}
