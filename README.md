@@ -26,7 +26,7 @@ technologies ([docker](https://docker.io), [runc](http://runc.io/),
 ## Still todo ##
 
 - Create openvswitch bridge
-- Prepare separate VMs for runc, systemd-nspawn and rkt
+- Prepare separate VMs for runc, systemd-nspawn and rkt from networkd/ovs base img
 - Create basic docker images & containers for GoCD (server & agent). Use ansible internally to deploy apps.
 - Switch docker to openvswitch bridge and repeat above
 - Pack above containers FS and create runc containers from it; use OVS bridge for networking
