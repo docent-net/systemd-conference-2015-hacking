@@ -1,0 +1,3 @@
+---
+- name: Install openvswitch
+  dnf: name=openvswitch state=latest

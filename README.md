@@ -9,17 +9,19 @@ technologies ([docker](https://docker.io), [runc](http://runc.io/),
 
 ## Requirements: ##
 
-- F22 minimal installation on VM
+- F22 minimal installation on VM w/installed
 - ssh pubkey exported to **root** account of this VM (```ssh-copy-id root@<host_ip_addr>```)
 - replace your VM's IP addr in **inventory** file
-- installed **python** and **libselinux-python** on this VM (```dnf install -y python libselinux-python```)
+- installed **python** libs and **libselinux-python** on this VM 
+  (```dnf install -y python libselinux-python python2-dnf```)
 
 ## What we can do here? ##
 
 - Prepare environment (like preapring vanila F22 installation; creating ansible user, configuring sudo etc): 
   ```ansible-playbook plays/prepare-env.yml```
-- Switch from NetworkManager to systemd-networkd and systemd-resolved: 
-  ```ansible-playbook plays/switch-to-systemd-networking.yml```
+- Prepare networking (switch from NetworkManager to systemd-networkd and systemd-resolved, install openvswitch and 
+  configure L2 bridge): 
+  ```ansible-playbook plays/prepare-networking.yml```
   
 ## Still todo ##
 

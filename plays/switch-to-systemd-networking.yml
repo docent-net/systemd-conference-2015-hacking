@@ -1,6 +1,0 @@
----
-
-- hosts: linux-box
-  sudo: yes
-  roles:
-  - { role: systemd_networkd }
