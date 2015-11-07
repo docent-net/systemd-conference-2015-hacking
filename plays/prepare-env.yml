@@ -1,6 +1,6 @@
 ---
 
-- hosts: linux-box
+- hosts: vanilla-installation
   remote_user: root
   sudo: no
   roles:

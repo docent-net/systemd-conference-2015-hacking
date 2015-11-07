@@ -1,3 +1,6 @@
 ---
 - name: Install openvswitch
   dnf: name=openvswitch state=latest
+
+- name: Enable openvswitch service
+  service: name=openvswitch enabled=yes state=restarted

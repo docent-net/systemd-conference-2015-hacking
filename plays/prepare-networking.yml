@@ -1,7 +1,7 @@
 ---
 
-- hosts: linux-box
+- hosts: vanilla-installation
   sudo: yes
   roles:
   - { role: systemd_networkd, tags: systemd_networkd }
-  - { role: prepare_openvswitch_bridge, tags: openvswitch }
+# maybe later - { role: prepare_openvswitch_bridge, tags: openvswitch }
