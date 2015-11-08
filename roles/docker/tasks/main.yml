@@ -1,0 +1,6 @@
+---
+- include: setup_docker_service.yml
+  tags: { docker, setup }
+
+- include: setup_docker_gocd_server_image.yml
+  tags: { docker, image, gocd, server }

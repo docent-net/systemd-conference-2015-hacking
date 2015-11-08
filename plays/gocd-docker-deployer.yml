@@ -1,0 +1,6 @@
+---
+
+- hosts: vm-docker
+  sudo: yes
+  roles:
+  - { role: docker }

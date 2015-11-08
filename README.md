@@ -20,6 +20,9 @@ technologies ([docker](https://docker.io), [runc](http://runc.io/),
     - 192.168.122.15 for runc VM
     - 192.168.122.16 for systemd-nspawn VM
     - 192.168.122.17 for rkt VM
+    - 192.168.122.12 for docker registry
+- I also used my local Docker registry (as I do some work in areas where connectivity is rather poor, so it's easier
+  this way). This registry might be created with **plays/docker_registry_deployer.yml**
 
 ## What we can do here? ##
 
@@ -27,6 +30,8 @@ technologies ([docker](https://docker.io), [runc](http://runc.io/),
   ```ansible-playbook plays/prepare-env.yml```
 - Prepare networking (switch from NetworkManager to systemd-networkd and systemd-resolved): 
   ```ansible-playbook plays/prepare-networking.yml```
+- Create and deploy Docker registry:
+  ```ansible-playbook plays/docker_registry_deployer.yml```
   
 ## Still todo ##
 
@@ -35,3 +40,4 @@ technologies ([docker](https://docker.io), [runc](http://runc.io/),
 - Create systemd-nspawn containers and deploy GoCD using prepared earlier ansible-playbooks
 - Run same apps on rkt
 - maybe try to set this up using ovs L2 bridge?
+- Use unprivileged containers

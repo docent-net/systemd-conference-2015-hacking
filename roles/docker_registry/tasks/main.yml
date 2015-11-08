@@ -1,0 +1,13 @@
+---
+# This playbook installs Docker Registry
+- name: Setup hostname
+  hostname: name=registry-vm
+
+- name: Install docker registry
+  yum: name=docker-registry state=latest
+
+- name: Run docker registry
+  service: >
+    name=docker-registry
+    enabled=true
+    state=started

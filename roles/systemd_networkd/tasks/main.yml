@@ -8,6 +8,11 @@
 - name: Enable systemd-resolved
   service: name=systemd-resolved enabled=yes
 
+- name: Create systemd-network dir
+  file: >
+    path=/etc/systemd/network
+    state=directory
+
 - name: Create static IP configuration
   template: >
     src=templates/kvm_network.j2

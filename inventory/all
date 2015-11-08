@@ -3,3 +3,4 @@ vm-docker   ansible_ssh_host=192.168.122.14
 vm-runc   ansible_ssh_host=192.168.122.15
 vm-systemd-nspawn   ansible_ssh_host=192.168.122.16
 vm-rkt   ansible_ssh_host=192.168.122.17
+vm-registry ansible_ssh_host=192.168.122.12

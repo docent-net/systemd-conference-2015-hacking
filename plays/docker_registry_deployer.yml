@@ -1,0 +1,6 @@
+---
+
+- hosts: vm-registry
+  sudo: yes
+  roles:
+  - { role: docker_registry }

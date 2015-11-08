@@ -1,0 +1,18 @@
+---
+
+- name: Create Docker GoCD directory
+  file: >
+    path=/root/gocd-server
+    state=directory
+
+- name: Copy Dockerfile to the VM
+  copy: >
+    src=dockerfile-gocd-server/Dockerfile
+    dest=/root/gocd-server/Dockerfile
+
+- name: Create Docker GoCD image
+  docker_image: >
+    path=/root/gocd-server
+    name=hackfest/gocd-srv
+    state=present
+    nocache=yes
